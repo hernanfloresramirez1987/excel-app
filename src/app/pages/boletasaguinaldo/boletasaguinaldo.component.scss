@@ -1,0 +1,17 @@
+#btnx {
+  background-color: crimson;
+  color: white;
+  transition-duration: 3s;
+}
+
+#btnx:hover {
+  transition-property: background-color, crimson;
+  background-color: navy;
+  
+  transition-duration: 3s;
+}
+
+#btnxfooter:hover {
+  background-color: navy;
+  transition-duration: 3s;
+}

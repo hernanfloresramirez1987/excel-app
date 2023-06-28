@@ -1,0 +1,75 @@
+table {
+  border: #b2b2b2 1px solid;
+  width: 100%;
+}
+td,
+th {
+  border: black 1px solid;
+}
+
+#boltspags {
+  background-color: crimson;
+  color: white;
+  transition-duration: 2s;
+}
+#boltspags:hover {
+  background-color: navy;
+  color: white;
+  font-weight: 900;
+  transition-duration: 4s;
+}
+#boltspags>a {
+  color: navy;
+  font-weight: 900;
+  
+  transition-duration: 4s;
+}
+#boltspags>a:hover {
+  color: white;
+  font-weight: 900;
+  transition-duration: 4s;
+}
+
+#boltsaguil {
+  background-color: crimson;
+  color: white;
+  transition-duration: 2s;
+}
+#boltsaguil:hover {
+  background-color: navy;
+  color: white;
+  font-weight: 900;
+  transition-duration: 4s;
+}
+#boltsaguil>a {
+  color: navy;
+  font-weight: 900;
+  transition-duration: 4s;
+}
+#boltsaguil>a:hover {
+  color: white;
+  font-weight: 900;
+  transition-duration: 4s;
+}
+
+#boltsreints {
+  background-color: crimson;
+  color: white;
+  transition-duration: 2s;
+}
+#boltsreints:hover {
+  background-color: navy;
+  color: white;
+  font-weight: 900;
+  transition-duration: 4s;
+}
+#boltsreints>a {
+  color: navy;
+  font-weight: 900;
+  transition-duration: 4s;
+}
+#boltsreints>a:hover {
+  color: white;
+  font-weight: 900;
+  transition-duration: 4s;
+}

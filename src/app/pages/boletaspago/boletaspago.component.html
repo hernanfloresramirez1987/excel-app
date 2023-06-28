@@ -1,0 +1,57 @@
+<div class="container">
+  <br>
+  <h4 style="text-align: center; font-size: 28px;"><b><u>BOLETAS DE PAGO DE {{name}}</u></b></h4>
+  <label id="btnx" class="btn-danger" style="width: 100%;" ngbButtonLabel>
+    Seleccionar Archivo<input type="file" (change)="onFileChange($event)" multiple="false" class="d-none">
+  </label>
+  <div class="table-responsive">
+    <table id="pdfTable" #pdfTable datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"
+      class="table table-striped table-bordered row-border hover">
+      <thead>
+        <tr style="background-color: #34495E; color: white;">
+          <th>No</th>
+          <th>Nombre Completo</th>
+          <th>Nacionalidad</th>
+          <th>Sexo</th>
+          <th>C.I.</th>
+          <th>Cargo</th>
+          <th>IMPRESIÓN</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let e of data">
+          <td *ngIf="e['N°']===0" style="color: white; background-color: crimson;">{{ e['N°'] }}</td>
+        <td *ngIf="e['N°']!==0">{{ e['N°'] }}</td>
+        <td *ngIf="e['N°']===0" style="color: white; background-color: crimson;">{{ e['NOMBRES Y APELLIDOS'] }}</td>
+        <td *ngIf="e['N°']!==0">{{ e['NOMBRES Y APELLIDOS'] }}</td>
+        <td *ngIf="e['N°']===0" style="color: white; background-color: crimson;">{{ e.NACIONALIDAD }}</td>
+        <td *ngIf="e['N°']!==0">{{ e.NACIONALIDAD }}</td>
+        <td *ngIf="e['N°']===0" style="color: white; background-color: crimson;">{{ e.SEXO }}</td>
+        <td *ngIf="e['N°']!==0">{{ e.SEXO }}</td>
+        <td *ngIf="e['N°']===0" style="color: white; background-color: crimson;">{{ e.CI }}</td>
+        <td *ngIf="e['N°']!==0">{{ e.CI }}</td>
+        <td *ngIf="e['N°']===0" style="color: white; background-color: crimson;">{{ e.CARGO }}</td>
+        <td *ngIf="e['N°']!==0">{{ e.CARGO }}</td>
+        <td *ngIf="e['N°']===0" style="color: white; background-color: crimson; text-align: center;">#ERROR!</td>
+        <td *ngIf="e['N°']!==0">
+          <button type="button" class="btn btn-block btn-dark" (click)="genpdfOne(e)">
+            Imprimir
+          </button>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+</div>
+<br>
+<div class="btn-group btn-group-toggle" style="width: 100%; align-items: center;">
+  <!--label class="btn-dark" ngbButtonLabel (click)="genpdfAll0()">
+      IMPRIMIR TODO
+    </label-->
+  <label id="btnxfooter" class="btn-dark" ngbButtonLabel (click)="genpdfAll()">
+    <b>
+      IMPRIMIR TODO
+    </b>
+  </label>
+  <!--qrcode [qrdata]="myqrcode" [width]="256" [errorCorrectionLevel]="'M'"></qrcode-->
+</div>
+</div>
